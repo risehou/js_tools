@@ -13,7 +13,7 @@ function zenkaku2hankaku($this) {
         if (id == "TEL") {
             out = out.replaceAll("-", "");
             out = out.replaceAll("/", "");
-            str = str.replaceAll(" ", "");
+            out = str.replaceAll(" ", "");
             out = out.replaceAll("　", "");
         } else if (id == "YUBIN") {
             out = out.replaceAll("-", "");
