@@ -11,18 +11,18 @@ function zenkaku2hankaku($this) {
         });
  
         if (id == "TEL") {
-            str = str.replaceAll("-", "");
-            str = str.replaceAll("/", "");
+            out = out.replaceAll("-", "");
+            out = out.replaceAll("/", "");
             str = str.replaceAll(" ", "");
-            str = str.replaceAll("　", "");
+            out = out.replaceAll("　", "");
         } else if (id == "YUBIN") {
-            str = str.replaceAll("-", "");
-            str = str.replaceAll("/", "");
-            str = str.replaceAll(" ", "");
-            str = str.replaceAll("　", ""); 
+            out = out.replaceAll("-", "");
+            out = out.replaceAll("/", "");
+            out = out.replaceAll(" ", "");
+            out = out.replaceAll("　", ""); 
         } else{
-            str = str.replaceAll(" ", "");
-            str = str.replaceAll("　", "");
+            out = str.replaceAll(" ", "");
+            out = str.replaceAll("　", "");
         }
-        document.getElementById(id).value = out;
+        $this.value = out;
 }
