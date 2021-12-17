@@ -6,9 +6,7 @@ function zenkaku2hankaku($this) {
         var str = $this.value;
         var id = $this.id;
 
-        if (id == "TEL") {
-            str = str.replaceAll(/\D/g, "");
-        } else if (id == "YUBIN") {
+        if (id == "TEL"||id == "YUBIN") {
             str = str.replaceAll(/\D/g, "");
         } else{
             str = str.replaceAll(" ", "");
