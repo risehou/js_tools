@@ -7,7 +7,9 @@ function zenkaku2hankaku($this) {
         var id = $this.id;
 
         if (id == "TEL"||id == "YUBIN") {
-            str = str.replaceAll(/\D/g, "");
+            if (!str.match(/[０-９]/g)) {
+                str = str.replaceAll(/\D/g, "");
+            }
         } else{
             str = str.replaceAll(" ", "");
             str = str.replaceAll("　", "");
