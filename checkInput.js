@@ -9,7 +9,6 @@ function zenkaku2hankaku($this) {
         var out = str.replace(/[！-～]/g, function (s) {
             return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
         });
-        document.getElementById(id).value = out;
  
         if (id == "TEL") {
             str = str.replaceAll("-", "");
@@ -25,5 +24,5 @@ function zenkaku2hankaku($this) {
             str = str.replaceAll(" ", "");
             str = str.replaceAll("　", "");
         }
-        
+        document.getElementById(id).value = out;
 }
